@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+      <script>
+      var apiReq = "http://api.openweathermap.org/data/2.5/forecast";
+      var key = "01b0df735179e9b6382e2968b989eeba";
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } 
+            else {
+
+            }
+        }
+          
+        function showPosition(position) {
+            var lat=position.coords.latitude.toFixed(1);
+            var lng=position.coords.longitude.toFixed(1);
+            var apiUrl=apiReq+"?lat="+lat+"&lon="+lng+"&APPID="+key;
+            $.getJSON(apiUrl, function (results) {
+                
+            });
+        }
+          
+        $(function() {
+            getLocation();
+        });
+
+      </script>
+
+    </body>
+
+</html>

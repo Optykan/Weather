@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+        <link href='css/weather.css' rel='stylesheet'>
+        <link href='css/styles.css' rel='stylesheet'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/jquery.fullPage.min.css" rel='stylesheet'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/jquery.fullPage.min.js"></script>
+
+    </head>
+    <body>
+        <div class="dim"></div>
+        <div id="fullpage">
+            <div class="section">
+                <div class='current'>
+                    <center>
+                        <p class='os now'>it's 
+                            <span id='temp'>28</span>&deg;<span id='unit'>C</span> now, thunderstorms</br>
+                        </p>
+                        <p class='os feels'>feels like 10 000&deg;C</p>
+                    </center>
+                </div>
+            </div>
+            <div class="section os white">
+                <div class='slide'></div>
+                <div class="slide"><h1>Section 2</h1></div>
+            </div>
+        </div>
+        
+        
+        <script>            
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //Navigation
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+                //Scrolling
+                fitToSectionDelay: 100,
+                scrollingSpeed: 700,
+                scrollBar: true,
+                easing: 'easeInOutCubic',
+                loopHorizontal: false,
+                //Accessibility
+                recordHistory: false,
+                verticalCentered: true,
+                //Design
+                controlArrows: true
+            });
+        });
+        $.backstretch("img/Clear.jpg");
+        </script>
+    </body>
+</html>

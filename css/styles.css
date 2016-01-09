@@ -1,0 +1,91 @@
+body{
+    overflow-x:hidden !important;
+}
+h1{
+    color: white;
+}
+.dim {
+    background-color:rgba(0,0,0,0.5);
+    height:100%;
+    width:100%;
+    z-index:1;
+    position:fixed;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    top:0px;
+}
+.section{
+    z-index:2;
+}
+.os{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.temperature {
+    font-size:10em;
+    color:white;
+}
+
+.current {
+    padding-top:0px;
+}
+
+.city {
+    font-size:4em;
+    color:white;
+    padding-left:150px;
+}
+
+.conditions {
+    color:white;
+    font-size:4em;
+    padding-left:150px;
+}
+
+.now {
+    margin-top:0px;
+    font-size:5em;
+    color:white;
+    margin-bottom:0px;
+}
+
+.feels {
+    color:white;
+    font-size:2em;
+    margin-top:0.5em;
+}
+
+.white {
+    color:white;
+}
+.fp-slidesNav a span{
+    color:white !important;
+    background-color:white !important;
+    background:white !important;
+}
+
+
+.extra {
+    position:absolute;
+    color:white;
+    width:100%;
+    bottom:0px;
+    font-size:2em;
+    display:inline;
+    text-align:center;
+}
+
+.top {
+    position:absolute;
+    top:0.5em;
+    width:100%;
+    text-align:center;
+    color:white;
+    font-size:2em;
+}
+.slidefix {
+    position:absolute;
+    top:0.5em;
+    color:white;
+    font-size:2em;
+}

@@ -1,0 +1,21 @@
+
+    for($i=0; $i<8; $i++){
+        $haystack=$weatherdata['list'][$i]['dt_txt'];
+        $dateZero=strpos($haystack, $needle);
+        if($dateZero === false){
+        }
+        else{
+
+            $offset=$i;
+            break;
+           
+        }
+    }
+    for($d=1; $d<6; $d++){
+            $i=$offset;
+            ${'temperature'.$d}=round($weatherdata['list'][$i]['main'][temp]-273.15);
+            ${'dayname'.$d}=date("l", strtotime(explode(" ",$weatherdata['list'][$i]['dt_txt'])[0]));
+            echo ${'dayname'.$d}."---".${'temperature'.$d};
+            $offset=$offset+8;
+        
+    }
